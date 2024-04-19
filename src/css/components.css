@@ -142,7 +142,7 @@
 }
 @media (max-width: 768px) {
   .img-bg {
-    min-height: 120vh;
+    min-height: 140vh;
   }
   .gallery-abt {
     max-width: unset;
