@@ -1,0 +1,42 @@
+header {
+  color: white;
+}
+
+header ul {
+  list-style-type: none;
+}
+header li {
+  padding: 5px 10px;
+  height: fit-content;
+  cursor: pointer;
+}
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header ul {
+    display: none !important;
+  }
+  .menu {
+    width: 35px;
+    background: none;
+    outline: none;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu div {
+    width: 80%;
+    height: 4px;
+    background-color: var(--gold);
+    border-radius: 4px;
+    margin-bottom: 2px;
+  }
+  .menu div:first-child {
+    width: 6px;
+    height: 6px;
+  }
+}

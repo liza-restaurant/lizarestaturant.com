@@ -1,0 +1,82 @@
+.hero {
+  width: 100vw;
+  min-height: 90vh;
+}
+.hero .container:last-child {
+  flex: 1;
+  min-height: calc(90vh - 150px);
+}
+.frame-img {
+  position: relative;
+  aspect-ratio: 1/1;
+  padding: 12px;
+}
+.img-hero {
+  width: 400px;
+}
+.frame-img::before,
+.frame-img::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: var(--gold);
+  z-index: -1;
+}
+.frame-img::before {
+  bottom: 0;
+  left: 0;
+}
+.frame-img::after {
+  top: 0;
+  right: 0;
+}
+.frame-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  z-index: 2;
+}
+.hero-texts h2 {
+  font-size: 6em;
+  color: var(--gold);
+}
+.hero-texts {
+  max-width: 45%;
+}
+.hero-texts span {
+  color: white;
+}
+.hero-texts button.btn span {
+  color: var(--black);
+}
+.hero-texts .intro-text {
+  font-size: 23px;
+}
+.scroller {
+  height: inherit;
+  margin-top: auto;
+  cursor: pointer;
+}
+.scroller span {
+  color: var(--gold);
+  font-size: 0.7em;
+  display: block;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .hero .container:last-child {
+    flex-direction: column-reverse;
+  }
+  .img-hero {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .hero-texts h2 {
+    font-size: 3em;
+  }
+  .hero-texts {
+    max-width: unset;
+    width: 100%;
+  }
+}

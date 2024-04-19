@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #0c0b08;
+  --black: #0c0c0c;
+  --grey: #aaaaaa;
+  --gold: #dcca87;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  background-color: var(--bg);
+  color: var(--grey);
+}
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.cormorant {
+  font-family: "Cormorant Upright", serif;
+}
+.f100 {
+  font-weight: 100;
+}
+.f200 {
+  font-weight: 200;
+}
+.f300 {
+  font-weight: 300;
+}
+.f400 {
+  font-weight: 400;
+}
+.f500 {
+  font-weight: 500;
+}
+.f600 {
+  font-weight: 600;
+}
+.f700 {
+  font-weight: 700;
+}
+.f800 {
+  font-weight: 800;
+}
+.f900 {
+  font-weight: 900;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.justify-baseline {
+  justify-content: baseline;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-baseline {
+  align-items: baseline;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-start {
+  align-items: flex-start;
+}
+.flex-column {
+  flex-direction: column;
+}
+.app {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-column {
+    flex-direction: column;
+  }
+  .mobile-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .desktop {
+    display: none;
+  }
+}
