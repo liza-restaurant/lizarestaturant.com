@@ -46,8 +46,11 @@ function Footer(props) {
               </defs>
             </svg>
             <div className="socials flex justify-center align-center">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                {" "}
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="11"
                   height="20"
@@ -61,7 +64,11 @@ function Footer(props) {
                   />
                 </svg>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 <svg
                   width="23"
@@ -77,7 +84,11 @@ function Footer(props) {
                 </svg>
               </a>
 
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="25"
                   height="24"

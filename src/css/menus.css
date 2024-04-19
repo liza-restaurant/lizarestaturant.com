@@ -1,0 +1,102 @@
+.icon {
+  width: 35px;
+  height: 35px;
+  background-color: #212121;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.category {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  transition: 0.3s all ease-in-out;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #212121;
+}
+.categories {
+  width: 200px;
+}
+.category span {
+  font-size: 0.9em;
+}
+.category.active span,
+.category:hover span {
+  color: var(--gold);
+  font-weight: 600;
+}
+.category.active,
+.category:hover {
+  border-color: var(--gold);
+}
+.category.active .icon,
+.category:hover .icon {
+  background-color: var(--gold);
+}
+.list,
+.items {
+  flex: 1;
+}
+.items {
+  padding-left: 20px;
+}
+.list {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  width: calc(33.33% - 10px);
+  height: 250px;
+  cursor: pointer;
+}
+.card .img-card {
+  width: 100%;
+  height: 150px;
+  background-color: #212121;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.card .img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s all ease-in-out;
+}
+.card .details h4 {
+  font-size: 1em;
+  color: white;
+}
+.card .img-card:hover img {
+  scale: 1.1;
+}
+.card .details span {
+  font-size: 0.7em;
+}
+.price {
+  display: block;
+  color: var(--black);
+  margin-left: auto;
+  background-color: var(--gold);
+  width: fit-content;
+  padding: 3px 5px;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .categories,
+  .items {
+    width: 100%;
+  }
+  .items {
+    padding-left: 0px;
+  }
+  .card {
+    width: 100%;
+  }
+}
