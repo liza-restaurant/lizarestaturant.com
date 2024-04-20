@@ -87,6 +87,26 @@
   border-radius: 4px;
   font-weight: 700;
 }
+.p-image {
+  width: 100%;
+  height: 220px;
+  background-color: #151515;
+  position: relative;
+}
+.p-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.p-image .content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 0;
+}
 
 @media (max-width: 768px) {
   .categories,
@@ -98,6 +118,11 @@
   }
   .card {
     width: 100%;
+    height: fit-content;
+    margin-bottom: 15px;
+  }
+  .card .img-card {
+    height: 180px;
   }
   .categories {
     height: 100px;

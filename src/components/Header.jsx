@@ -17,6 +17,7 @@ function Header(props) {
             fill="white"
           />
         </svg>
+        {/* <h2 className="cormorant logo">LIZA</h2> */}
       </Link>
       <button className="menu">
         <div />

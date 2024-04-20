@@ -13,6 +13,13 @@ header li {
 .menu {
   display: none;
 }
+.logo {
+  color: var(--gold);
+  font-size: 3em;
+}
+a {
+  text-decoration: none;
+}
 
 @media (max-width: 768px) {
   header ul {

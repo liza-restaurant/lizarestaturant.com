@@ -2,6 +2,8 @@ import { useState } from "react";
 import "../css/menus.css";
 import { formatNumber, menus } from "../utils";
 import useWindow from "../hooks/useWindow";
+import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Icon = () => {
   return <div className="icon flex justify-center align-center"></div>;
@@ -19,20 +21,24 @@ const Category = ({ title, onSelect, active = false }) => {
   );
 };
 
-const Item = ({ name, image, description }) => {
+const Item = ({ name, image, description, id, ...props }) => {
   return (
-    <div className="card">
+    <Link
+      to={`/menu/${id}`}
+      state={{ item: { ...props, name, image, description } }}
+      className="card"
+    >
       <div className="img-card">
         <img src={image} alt={description} />
       </div>
       <div className="details">
         <h4>{name}</h4>
-        <span>{description}</span>
+        <span style={{ color: "var(--grey)" }}>{description}</span>
         <span className="price">
           {formatNumber((Math.random() * 10000).toFixed(0))}
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -41,30 +47,34 @@ function Menus(props) {
   const { width } = useWindow();
 
   return (
-    <div className="container flex mobile-column">
-      <div className="categories">
-        {(width < 768 ? menus : menus.slice(1)).map((m, idx) => (
-          <Category
-            active={menu === m.data}
-            onSelect={() => setMenu(m.data)}
-            key={idx}
-            title={m.title}
-          />
-        ))}
-      </div>
-      <div className="items">
-        <div className="list flex">
-          {menu?.map((a, idx) => (
-            <Item
+    <>
+      <Header />
+      <div className="container flex mobile-column">
+        <div className="categories">
+          {(width < 768 ? menus : menus.slice(1)).map((m, idx) => (
+            <Category
+              active={menu === m.data}
+              onSelect={() => setMenu(m.data)}
               key={idx}
-              image={a.image}
-              description={a.description}
-              name={a.name}
+              title={m.title}
             />
           ))}
         </div>
+        <div className="items">
+          <div className="list flex">
+            {menu?.map((a, idx) => (
+              <Item
+                id={idx + 1}
+                key={idx}
+                image={a.image}
+                description={a.description}
+                name={a.name}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
