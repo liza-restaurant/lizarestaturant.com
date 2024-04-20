@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import DataContext from "./contexts/DataContext";
 import { getItem, setItem } from "./utils/store";
 import { themes } from "./utils";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
@@ -36,6 +37,15 @@ function App() {
 
   return (
     <DataContext.Provider value={{ cart, setCart, setTheme, theme }}>
+      {theme === themes.light ? (
+        <Helmet>
+          <meta name="theme-color" content="#fff" />
+        </Helmet>
+      ) : (
+        <Helmet>
+          <meta name="theme-color" content="#0c0b08" />
+        </Helmet>
+      )}
       <BrowserRouter>
         <div className={`app open-sans ${theme}`}>
           <Routes>

@@ -26,6 +26,7 @@ const Item = ({ item, updateCart }) => {
           return _;
         })
       );
+    // eslint-disable-next-line
   }, [count]);
 
   return (
