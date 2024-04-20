@@ -47,7 +47,7 @@
   height: 376px;
 }
 .title span {
-  color: white;
+  color: var(--white);
 }
 .title h2 {
   font-size: 3.5em;
@@ -55,7 +55,7 @@
 }
 .contact-info span {
   display: block;
-  color: white;
+  color: var(--white);
   font-size: 0.9em;
 }
 .contact-info h3 {
@@ -177,4 +177,13 @@
   .img-bg-min {
     min-height: 75vh;
   }
+}
+.light .img-bg {
+  background-image: unset !important;
+}
+.light .img-bg .content {
+  background-color: unset;
+}
+.light .img-bg-min {
+  min-height: unset;
 }

@@ -16,7 +16,7 @@
   font-size: 4em;
 }
 .abt p {
-  color: white;
+  color: var(--white);
   font-size: 0.8em;
 }
 .socials a {
@@ -41,6 +41,7 @@
 .copy {
   text-align: center;
   padding: 20px 0px;
+  padding-bottom: 0px;
   font-size: 0.9em;
 }
 @media (max-width: 768px) {

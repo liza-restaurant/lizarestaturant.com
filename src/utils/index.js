@@ -1,6 +1,8 @@
 export const formatNumber = (n, pre = "₦") =>
   (pre || "") + n?.toString()?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
+export const themes = { light: "light", dark: "dark" };
+
 export const menus = [
   {
     title: "All Menu",

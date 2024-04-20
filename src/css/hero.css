@@ -1,6 +1,6 @@
 .hero {
   width: 100vw;
-  min-height: 90vh;
+  /* min-height: 90vh; */
 }
 .hero .container:last-child {
   flex: 1;
@@ -45,7 +45,7 @@
   max-width: 45%;
 }
 .hero-texts span {
-  color: white;
+  color: var(--white);
 }
 .hero-texts button.btn span {
   color: var(--black);

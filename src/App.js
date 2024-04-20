@@ -7,27 +7,37 @@ import Base from "./routes/Base";
 import { useEffect, useState } from "react";
 import DataContext from "./contexts/DataContext";
 import { getItem, setItem } from "./utils/store";
+import { themes } from "./utils";
 
 function App() {
-  const [cartSync, setCartSync] = useState(false);
+  const [theme, setTheme] = useState(themes.dark);
+  const [isSync, setIsSync] = useState(false);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const cart = getItem("cart") || [];
+    const theme = getItem("theme") || themes.dark;
     setCart(cart);
-    setCartSync(true);
+    setTheme(theme);
+    setIsSync(true);
   }, []);
 
   useEffect(() => {
-    if (cartSync) {
+    if (isSync) {
       setItem("cart", cart);
     }
-  }, [cart, cartSync]);
+  }, [cart, isSync]);
+
+  useEffect(() => {
+    if (isSync) {
+      setItem("theme", theme);
+    }
+  }, [theme, isSync]);
 
   return (
-    <DataContext.Provider value={{ cart, setCart }}>
+    <DataContext.Provider value={{ cart, setCart, setTheme, theme }}>
       <BrowserRouter>
-        <div className="app open-sans">
+        <div className={`app open-sans ${theme}`}>
           <Routes>
             <Route path="/" element={<Base />} />
             <Route path="/menu" element={<Menus />} />
