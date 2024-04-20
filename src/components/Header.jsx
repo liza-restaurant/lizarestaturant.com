@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
 
-function Header(props) {
+function Header({ transparent }) {
   return (
-    <header className="container align-center flex justify-between">
+    <header
+      className={`container align-center flex justify-between ${
+        transparent ? "transparent" : ""
+      }`}
+    >
       <Link to={"/"}>
         <svg
           width="99"

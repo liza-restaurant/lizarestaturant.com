@@ -22,10 +22,24 @@ const Category = ({ title, onSelect, active = false }) => {
 };
 
 const Item = ({ name, image, description, id, ...props }) => {
+  const price = (Math.random() * 10000).toFixed(0);
   return (
     <Link
       to={`/menu/${id}`}
-      state={{ item: { ...props, name, image, description } }}
+      state={{
+        item: {
+          ...props,
+          name,
+          image,
+          description,
+          price,
+          id: (() => {
+            let n = name;
+            while (n.includes(" ")) n = n.replace(" ", "-");
+            return n.toLowerCase();
+          })(),
+        },
+      }}
       className="card"
     >
       <div className="img-card">
@@ -34,9 +48,7 @@ const Item = ({ name, image, description, id, ...props }) => {
       <div className="details">
         <h4>{name}</h4>
         <span style={{ color: "var(--grey)" }}>{description}</span>
-        <span className="price">
-          {formatNumber((Math.random() * 10000).toFixed(0))}
-        </span>
+        <span className="price">{formatNumber(price)}</span>
       </div>
     </Link>
   );

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function Button({ title, width = "100%", height = 45, onClick, to }) {
+function Button({ title, width = "100%", height = 45, onClick, to, ...props }) {
   const navigate = useNavigate();
   const handleClick = () => {
     if (to) return navigate(to);
@@ -9,6 +9,7 @@ function Button({ title, width = "100%", height = 45, onClick, to }) {
 
   return (
     <button
+      {...props}
       onClick={handleClick}
       className="flex btn align-center justify-center cormorant f700"
       style={{ width, height }}
