@@ -75,6 +75,9 @@ a {
 .light header svg.svg-logo path {
   fill: var(--gold);
 }
+.dark header svg.svg-logo path {
+  fill: var(--white);
+}
 .light header li {
   font-weight: 400 !important;
 }
