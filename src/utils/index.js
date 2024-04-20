@@ -3,12 +3,103 @@ export const formatNumber = (n, pre = "₦") =>
 
 export const menus = [
   {
+    title: "All Menu",
+    className: "all",
+  },
+  {
     title: "Tea",
-    data: [],
+    data: [
+      {
+        image:
+          "https://images.pexels.com/photos/734983/pexels-photo-734983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        description: "Lemon Slice",
+        name: "Lemon Tea",
+      },
+      {
+        name: "Turkish Coffee",
+        description: "Arabic",
+        image:
+          "https://images.pexels.com/photos/15658677/pexels-photo-15658677/free-photo-of-tea-in-a-glass-on-the-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Nescafe",
+        description: "Instant Coffee",
+        image:
+          "https://images.pexels.com/photos/2013749/pexels-photo-2013749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Mint Tea",
+        description: "with Mint Leave",
+        image:
+          "https://images.pexels.com/photos/259955/pexels-photo-259955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Cappuccino",
+        description: "Coffee Shake",
+        image:
+          "https://images.pexels.com/photos/428310/pexels-photo-428310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Argili Shisha",
+        description: "Arabic Filtered Tobacco",
+        image:
+          "https://images.pexels.com/photos/4411547/pexels-photo-4411547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Green Tea",
+        description: "Green Tea",
+        image:
+          "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+    ],
   },
   {
     title: "Beer",
     data: [],
+  },
+  {
+    title: "Pasta",
+    data: [
+      {
+        name: "Penne Arabiata",
+        description:
+          "Penne Pasta, Tomato Sause, Pepperonica, Garlic Olive Oil, Basil, Parmesan Cheese",
+        image:
+          "https://images.pexels.com/photos/546945/pexels-photo-546945.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Pettuccini Alfredo",
+        description:
+          "Eglith Fottuccini Pasta, White Creaming Sauce, Chicken Breast, Mushrooms, Parmesan Chees",
+        image:
+          "https://images.pexels.com/photos/11220208/pexels-photo-11220208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Sea Food Spaghetti",
+        description:
+          "Spaghetti, Garlic, Olive Oil, Basil Cherry Tomatoes Permesan Cheese, Calamars, Fish, Shrimps",
+        image:
+          "https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Shrimps Pesto Tagliatell",
+        description: "Tagliatelle Pasta, Pesto, Sauce, Shrimps Parmesan Cheese",
+        image:
+          "https://images.pexels.com/photos/5604813/pexels-photo-5604813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Chicken Spaghetti",
+        description: "Shredded, Chicken, Vegetable",
+        image:
+          "https://images.pexels.com/photos/9814654/pexels-photo-9814654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      },
+      {
+        name: "Spaghetti: Bolognaise (Chinese)",
+        description: "Minced Meat, Tomatoes Sauces, Onion, Garlic",
+        image:
+          "https://images.pexels.com/photos/4349774/pexels-photo-4349774.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+    ],
   },
   {
     title: "Pizza",
@@ -25,11 +116,68 @@ export const menus = [
         description: "Tomato Sauce Mozzarella Cheese, Sausage Mushroom-olives",
         name: "Traditional Pizza",
       },
+      {
+        name: "Vegetarian Pizza",
+        description:
+          "Tomato Sauce Mozzarella Cheese, Onions, Green Pepper, Red Pepper, Fresh Mushroom Silvet Corn, Olive",
+        image:
+          "https://images.pexels.com/photos/5419314/pexels-photo-5419314.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Pepperoni Pizza",
+        description: "Tomato Sauce, Cheese, Pepperoni",
+        image:
+          "https://images.pexels.com/photos/280453/pexels-photo-280453.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Chicken Pizza",
+        description: "Tomato Sauce, Cheese, Tomatoes Chicken, Basil",
+        image:
+          "https://images.pexels.com/photos/4394612/pexels-photo-4394612.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Sea Food Pizza",
+        description: "Tomato Sauce, Cheese, Calamar Fish, Shrimps",
+        image:
+          "https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
     ],
   },
   {
     title: "Sea Food",
-    data: [],
+    data: [
+      {
+        name: "Fish/Chip",
+        description: "Fried Crispy Fish Fillet, French Fried, Tartar Sauce",
+        image:
+          "https://images.pexels.com/photos/10549666/pexels-photo-10549666.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Grilled Fish Fillet",
+        description: "Fillet Fish, Potatoes, Fresh Green Salad",
+        image:
+          "https://images.pexels.com/photos/7627414/pexels-photo-7627414.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Prawns Arabiata",
+        description: "Roasted Prawns, Spicy Tomato Sauce, Paramesans Cheese",
+        image:
+          "https://images.pexels.com/photos/5041500/pexels-photo-5041500.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
+      },
+      {
+        name: "Grilled Fish",
+        description:
+          "Fried Fish, Onion, Tomatoes, Green Pepper, Served with LIZA Sauce, Chips or Rice",
+        image:
+          "https://images.pexels.com/photos/8964280/pexels-photo-8964280.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+      {
+        name: "Fish Pane",
+        description: "Bread Fish, Served with Lemon Sauce",
+        image:
+          "https://images.pexels.com/photos/7474368/pexels-photo-7474368.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      },
+    ],
   },
   {
     title: "Staters",

@@ -36,7 +36,7 @@ const Item = ({ name, image, description }) => {
 };
 
 function Menus(props) {
-  const [menu, setMenu] = useState(menus[2].data);
+  const [menu, setMenu] = useState(menus[0].data);
   return (
     <div className="container flex mobile-column">
       <div className="categories">
