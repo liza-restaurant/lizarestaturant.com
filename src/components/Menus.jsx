@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../css/menus.css";
 import { formatNumber, menus } from "../utils";
+import useWindow from "../hooks/useWindow";
 
 const Icon = () => {
   return <div className="icon flex justify-center align-center"></div>;
@@ -36,11 +37,13 @@ const Item = ({ name, image, description }) => {
 };
 
 function Menus(props) {
-  const [menu, setMenu] = useState(menus[0].data);
+  const [menu, setMenu] = useState(menus[1].data);
+  const { width } = useWindow();
+
   return (
     <div className="container flex mobile-column">
       <div className="categories">
-        {menus.map((m, idx) => (
+        {(width < 768 ? menus : menus.slice(1)).map((m, idx) => (
           <Category
             active={menu === m.data}
             onSelect={() => setMenu(m.data)}

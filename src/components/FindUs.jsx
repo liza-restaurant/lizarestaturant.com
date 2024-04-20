@@ -5,11 +5,8 @@ import Button from "./Button";
 
 function FindUs(props) {
   return (
-    <ImgBG className="chefword">
-      <div
-        style={{ height: "100%" }}
-        className="container flex mobile-column-reverse align-center justify-between"
-      >
+    <ImgBG>
+      <div className="container img-bg-min flex mobile-column-reverse align-center justify-between">
         <div>
           <Title subtitle="Contact" title="Find Us" />
           <br />

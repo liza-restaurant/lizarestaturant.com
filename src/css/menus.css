@@ -70,7 +70,7 @@
   font-size: 1em;
   color: white;
 }
-.card .img-card:hover img {
+.card:hover .img-card img {
   scale: 1.1;
 }
 .card .details span {

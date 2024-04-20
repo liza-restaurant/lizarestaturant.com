@@ -1,12 +1,10 @@
 import salmon from "../assets/salmon.png";
 import Button from "./Button";
-import Header from "./Header";
 import "../css/hero.css";
 
 function Hero(props) {
   return (
     <div className="hero">
-      <Header />
       <div className="container mobile-column flex justify-between align-center">
         <div className="hero-texts">
           <span className="cormorant intro-text">Chase the new Flavour</span>
@@ -43,7 +41,7 @@ function Hero(props) {
             aliquam amet tellus
           </p>
           <br />
-          <Button width={140} title="Explore Menu" />
+          <Button to="/menu" width={140} title="Explore Menu" />
         </div>
         <div className="img-hero frame-img flex justify-center align-center">
           <img src={salmon} alt="Salmon Fish" />

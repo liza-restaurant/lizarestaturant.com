@@ -7,7 +7,6 @@ function ImgBG({ className, children, ...props }) {
       className={`img-bg ${className}`}
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="bg"></div>
       <div className="content">{children}</div>
     </section>
   );

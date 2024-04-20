@@ -4,11 +4,8 @@ import Title from "./Title";
 
 function ChefWord(props) {
   return (
-    <ImgBG className="chefword">
-      <div
-        style={{ height: "100%" }}
-        className="container flex mobile-column align-center justify-between"
-      >
+    <ImgBG>
+      <div className="container img-bg-min flex mobile-column align-center justify-between">
         <div className="img-chef frame-img flex justify-center align-center">
           <img src={chef} alt="Chef" />
         </div>

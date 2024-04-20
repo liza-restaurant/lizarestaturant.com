@@ -1,23 +1,23 @@
-import ChefWord from "./components/ChefWord";
-import FindUs from "./components/FindUs";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
-import Hero from "./components/Hero";
+import Header from "./components/Header";
+import Base from "./routes/Base";
 import Menus from "./components/Menus";
-import Video from "./components/Video";
+import NotFound from "./routes/NotFound";
 
 function App() {
   return (
-    <div className="app open-sans">
-      <Hero />
-      <ChefWord />
-      <Video />
-      <br />
-      <Menus />
-      <Gallery />
-      <FindUs />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="app open-sans">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Base />} />
+          <Route path="/menu" element={<Menus />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
