@@ -10,6 +10,9 @@ header li {
   cursor: pointer;
   color: white;
 }
+.light header li {
+  color: var(--gold);
+}
 .menu {
   display: none;
 }
