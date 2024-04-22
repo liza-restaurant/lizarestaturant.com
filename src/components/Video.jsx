@@ -1,4 +1,4 @@
-import video from "../assets/seats.png";
+import video from "../assets/seats.jpeg";
 
 function Video(props) {
   return (

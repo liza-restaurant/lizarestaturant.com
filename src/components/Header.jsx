@@ -81,13 +81,19 @@ function Header({ transparent }) {
         <div />
       </button>
       <ul className="flex align-center f200">
-        <li>Home</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
         <li>Pages</li>
-        <li>Contact</li>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
         <li>Blog</li>
       </ul>
       <ul className="flex align-center">
-        <li>Login/Reservation</li>
+        <Link to="/contact?type=reservation">
+          <li>Event Reservation</li>
+        </Link>
         <li>
           <svg
             width="2"
@@ -112,7 +118,9 @@ function Header({ transparent }) {
             </defs>
           </svg>
         </li>
-        <li>Book Table</li>
+        <Link to="/contact?type=table">
+          <li>Book Table</li>
+        </Link>
         <li>
           <ThemeToggler />
         </li>

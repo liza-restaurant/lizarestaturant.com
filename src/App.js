@@ -9,6 +9,7 @@ import DataContext from "./contexts/DataContext";
 import { getItem, setItem } from "./utils/store";
 import { themes } from "./utils";
 import { Helmet } from "react-helmet";
+import Contact from "./components/Contact";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
@@ -52,6 +53,7 @@ function App() {
             <Route path="/" element={<Base />} />
             <Route path="/menu" element={<Menus />} />
             <Route path="/menu/:id" element={<ViewProduct />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

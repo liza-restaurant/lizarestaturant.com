@@ -1,4 +1,5 @@
 import "../css/footer.css";
+import Contact from "./Contact";
 import ImgBG from "./ImgBG";
 import NewsLetter from "./NewsLetter";
 

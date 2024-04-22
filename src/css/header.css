@@ -8,6 +8,7 @@ header li {
   padding: 5px 10px;
   height: fit-content;
   cursor: pointer;
+  color: white;
 }
 .menu {
   display: none;

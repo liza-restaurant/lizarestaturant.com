@@ -1,4 +1,4 @@
-import salmon from "../assets/salmon.png";
+import salmon from "../assets/fish.jpeg";
 import Button from "./Button";
 import "../css/hero.css";
 

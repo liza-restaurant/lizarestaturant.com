@@ -1,5 +1,5 @@
 import ImgBG from "./ImgBG";
-import cup from "../assets/cup.png";
+import cup from "../assets/13.jpeg";
 import Title from "./Title";
 import Button from "./Button";
 

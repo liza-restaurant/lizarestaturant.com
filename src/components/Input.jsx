@@ -1,7 +1,11 @@
-function Input(props) {
+function Input({ textarea, ...props }) {
   return (
     <div className="input flex">
-      <input type="text" {...props} />
+      {textarea ? (
+        <textarea {...props}></textarea>
+      ) : (
+        <input type="text" {...props} />
+      )}
     </div>
   );
 }

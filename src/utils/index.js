@@ -1,3 +1,55 @@
+import img1 from "../assets/1.jpeg";
+import img2 from "../assets/2.jpeg";
+import img14 from "../assets/14.jpeg";
+import img4 from "../assets/4.jpeg";
+import img5 from "../assets/5.jpeg";
+import img6 from "../assets/6.jpeg";
+import img7 from "../assets/7.jpeg";
+import img8 from "../assets/8.jpeg";
+import img9 from "../assets/9.jpeg";
+import img10 from "../assets/10.jpeg";
+import img11 from "../assets/11.jpeg";
+import img12 from "../assets/12.jpeg";
+
+export const images = [
+  {
+    image: img1,
+  },
+  {
+    image: img2,
+  },
+  {
+    image: img14,
+  },
+  {
+    image: img4,
+  },
+  {
+    image: img5,
+  },
+  {
+    image: img6,
+  },
+  {
+    image: img7,
+  },
+  {
+    image: img8,
+  },
+  {
+    image: img9,
+  },
+  {
+    image: img10,
+  },
+  {
+    image: img11,
+  },
+  {
+    image: img12,
+  },
+];
+
 export const formatNumber = (n, pre = "₦") =>
   (pre || "") + n?.toString()?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -55,10 +107,10 @@ export const menus = [
       },
     ],
   },
-  {
-    title: "Beer",
-    data: [],
-  },
+  //   {
+  //     title: "Beer",
+  //     data: [],
+  //   },
   {
     title: "Pasta",
     data: [
@@ -181,24 +233,24 @@ export const menus = [
       },
     ],
   },
-  {
-    title: "Staters",
-    data: [],
-  },
-  {
-    title: "Fresh Juice",
-    data: [],
-  },
-  {
-    title: "Hot Sandwiches",
-    data: [],
-  },
-  {
-    title: "Tuna Sandwiches",
-    data: [],
-  },
-  {
-    title: "Beverages Drinks",
-    data: [],
-  },
+  //   {
+  //     title: "Staters",
+  //     data: [],
+  //   },
+  //   {
+  //     title: "Fresh Juice",
+  //     data: [],
+  //   },
+  //   {
+  //     title: "Hot Sandwiches",
+  //     data: [],
+  //   },
+  //   {
+  //     title: "Tuna Sandwiches",
+  //     data: [],
+  //   },
+  //   {
+  //     title: "Beverages Drinks",
+  //     data: [],
+  //   },
 ];

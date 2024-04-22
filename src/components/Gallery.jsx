@@ -4,6 +4,7 @@ import noodles from "../assets/noodles.png";
 import egg from "../assets/egg.png";
 import soup from "../assets/soup.png";
 import drinks from "../assets/drinks.png";
+import { images } from "../utils";
 
 const Image = ({ image }) => {
   return (
@@ -26,14 +27,9 @@ function Gallery(props) {
         <Button title="View More" width={100} />
       </div>
       <div className="gallery">
-        <Image image={noodles} />
-        <Image image={egg} />
-        <Image image={soup} />
-        <Image image={drinks} />
-        <Image image={noodles} />
-        <Image image={egg} />
-        <Image image={soup} />
-        <Image image={drinks} />
+        {images.map((i, idx) => (
+          <Image key={idx} image={i.image} />
+        ))}
       </div>
     </div>
   );
