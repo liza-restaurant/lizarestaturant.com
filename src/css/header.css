@@ -41,9 +41,9 @@ a {
   display: none;
 }
 @media (max-width: 768px) {
-  header ul {
+  /* header ul {
     display: none !important;
-  }
+  } */
   .menu {
     width: 30px;
     background: none;
@@ -69,6 +69,20 @@ a {
   .menu div:first-child {
     width: 6px;
     height: 6px;
+  }
+  .mobile-ul {
+    flex-direction: column;
+  }
+  .mobile-ul li,
+  .mobile-ul a {
+    width: 100%;
+  }
+  .mobile-ul li {
+    padding: 15px;
+  }
+  .mobile-ul2 {
+    margin-top: auto;
+    margin-bottom: 100px;
   }
 }
 

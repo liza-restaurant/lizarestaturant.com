@@ -118,9 +118,22 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.header {
+  width: 100vw;
+  height: fit-content;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  background-color: var(--bg);
+  z-index: 5;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .mobile {
+    display: none;
   }
 }
 @media (min-width: 992px) {

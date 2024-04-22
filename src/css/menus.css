@@ -229,6 +229,33 @@ td {
   td {
     padding: 5px 2px !important;
   }
+  .nav-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 5;
+    transition: 0.3s all ease-in-out;
+    background-color: transparent;
+  }
+  .nav-container.opened {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .nav-container button {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-color: transparent;
+    outline: none;
+  }
+  .nav-container .nav-content {
+    width: 75%;
+    background-color: var(--bg);
+    height: 100%;
+  }
 }
 .light .card .details h4 {
   color: var(--gold);
