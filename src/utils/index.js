@@ -14,6 +14,7 @@ import tea from "../assets/tea.png";
 import pizza from "../assets/pizza.png";
 import seafood from "../assets/seafood.png";
 import spaghetti from "../assets/spaghetti.png";
+import menu from "../assets/menu.png";
 
 export const images = [
   {
@@ -63,6 +64,7 @@ export const menus = [
   {
     title: "All Menu",
     className: "all",
+    icon: menu,
   },
   {
     title: "Tea",
