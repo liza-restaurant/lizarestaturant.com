@@ -10,6 +10,10 @@ import img9 from "../assets/9.jpeg";
 import img10 from "../assets/10.jpeg";
 import img11 from "../assets/11.jpeg";
 import img12 from "../assets/12.jpeg";
+import tea from "../assets/tea.png";
+import pizza from "../assets/pizza.png";
+import seafood from "../assets/seafood.png";
+import spaghetti from "../assets/spaghetti.png";
 
 export const images = [
   {
@@ -62,6 +66,7 @@ export const menus = [
   },
   {
     title: "Tea",
+    icon: tea,
     data: [
       {
         image:
@@ -113,6 +118,7 @@ export const menus = [
   //   },
   {
     title: "Pasta",
+    icon: spaghetti,
     data: [
       {
         name: "Penne Arabiata",
@@ -157,6 +163,7 @@ export const menus = [
   },
   {
     title: "Pizza",
+    icon: pizza,
     data: [
       {
         image:
@@ -199,6 +206,7 @@ export const menus = [
   },
   {
     title: "Sea Food",
+    icon: seafood,
     data: [
       {
         name: "Fish/Chip",

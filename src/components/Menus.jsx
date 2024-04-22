@@ -5,17 +5,21 @@ import useWindow from "../hooks/useWindow";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 
-const Icon = () => {
-  return <div className="icon flex justify-center align-center"></div>;
+const Icon = ({ img }) => {
+  return (
+    <div className="icon flex justify-center align-center">
+      <img src={img} />
+    </div>
+  );
 };
 
-const Category = ({ title, onSelect, active = false }) => {
+const Category = ({ title, onSelect, icon, active = false }) => {
   return (
     <div
       onClick={onSelect}
       className={`flex category align-center ${active ? "active" : ""}`}
     >
-      <Icon />
+      <Icon img={icon} />
       <span>{title}</span>
     </div>
   );
@@ -65,6 +69,7 @@ function Menus(props) {
         <div className="categories">
           {(width < 768 ? menus : menus.slice(1)).map((m, idx) => (
             <Category
+              icon={m.icon}
               active={menu === m.data}
               onSelect={() => setMenu(m.data)}
               key={idx}
