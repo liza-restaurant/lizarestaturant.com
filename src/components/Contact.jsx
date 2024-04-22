@@ -54,7 +54,28 @@ function Contact(props) {
                 />
                 <br />
               </>
-            ) : null}
+            ) : (
+              <>
+                <Input
+                  options={[
+                    {
+                      label: "Table Kind",
+                      disabled: true,
+                    },
+                    {
+                      label: "Regular",
+                      value: "party",
+                    },
+                    {
+                      label: "VIP",
+                      value: "ceremony",
+                    },
+                  ]}
+                  placeholder="Table Kind"
+                />
+                <br />
+              </>
+            )}
             {type ? (
               <>
                 <Input
