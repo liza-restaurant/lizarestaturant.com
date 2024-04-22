@@ -108,6 +108,15 @@
   min-height: 45px;
   border: 1px solid var(--gold);
 }
+.input select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background: transparent;
+  padding: 10px;
+  color: var(--gold);
+}
 .input input,
 .input textarea {
   flex: 1;

@@ -29,9 +29,39 @@ function Contact(props) {
             <br />
             <Input placeholder="Your Email" />
             <br />
+            {type && type === "reservation" ? (
+              <>
+                <Input
+                  options={[
+                    {
+                      label: "Event Kind",
+                      disabled: true,
+                    },
+                    {
+                      label: "Party",
+                      value: "party",
+                    },
+                    {
+                      label: "Ceremony",
+                      value: "ceremony",
+                    },
+                    {
+                      label: "Meetings",
+                      value: "meetings",
+                    },
+                  ]}
+                  placeholder="Event Kind"
+                />
+                <br />
+              </>
+            ) : null}
             {type ? (
               <>
-                <Input placeholder="Date" type="date" />
+                <Input
+                  defaultValue={new Date()}
+                  placeholder="Date"
+                  type="date"
+                />
                 <br />
               </>
             ) : null}
