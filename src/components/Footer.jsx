@@ -112,7 +112,7 @@ function Footer(props) {
           </div>
         </div>
         <div className="copy flex justify-center align-center">
-          Alright Reserved. &copy; {new Date().getFullYear()} LISA Restaurant
+          Alright Reserved. &copy; {new Date().getFullYear()} LIZA Restaurant
         </div>
       </footer>
     </ImgBG>

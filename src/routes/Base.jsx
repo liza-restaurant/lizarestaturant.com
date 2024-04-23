@@ -11,8 +11,8 @@ function Base(props) {
     <>
       <Header />
       <Hero />
-      <About />
-      <ChefWord />
+      {/* <About /> */}
+      {/* <ChefWord /> */}
       <Video />
       <br />
       <Gallery />
