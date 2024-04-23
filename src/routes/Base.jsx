@@ -1,10 +1,10 @@
-import About from "../components/About";
 import ChefWord from "../components/ChefWord";
-import FindUs from "../components/FindUs";
 import Gallery from "../components/Gallery";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+import FindUs from "../components/FindUs";
 import Video from "../components/Video";
+// import About from "../components/About";
+import Hero from "../components/Hero";
 
 function Base(props) {
   return (
@@ -12,7 +12,7 @@ function Base(props) {
       <Header />
       <Hero />
       {/* <About /> */}
-      {/* <ChefWord /> */}
+      <ChefWord />
       <Video />
       <br />
       <Gallery />
