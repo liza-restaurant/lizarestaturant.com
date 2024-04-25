@@ -10,11 +10,25 @@ import { getItem, setItem } from "./utils/store";
 import { themes } from "./utils";
 import { Helmet } from "react-helmet";
 import Contact from "./components/Contact";
+import useProductCategories from "./hooks/useProductCategories";
+import useProducts from "./hooks/useProducts";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
   const [isSync, setIsSync] = useState(false);
   const [cart, setCart] = useState([]);
+
+  const {
+    categories,
+    getCategories,
+    isLoading: loading1,
+  } = useProductCategories();
+  const { products, getProducts, isLoading: loading2 } = useProducts();
+
+  useEffect(() => {
+    getCategories();
+    getProducts();
+  }, []);
 
   useEffect(() => {
     const cart = getItem("cart") || [];
@@ -37,8 +51,12 @@ function App() {
   }, [theme, isSync]);
 
   return (
-    <DataContext.Provider value={{ cart, setCart, setTheme, theme }}>
-      {theme === themes.light ? (
+    <DataContext.Provider
+      value={{ cart, setCart, setTheme, theme, categories, products }}
+    >
+      {loading1 || loading2 ? (
+        <div className="loader"></div>
+      ) : theme === themes.light ? (
         <Helmet>
           <meta name="theme-color" content="#fff" />
         </Helmet>

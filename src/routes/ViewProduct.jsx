@@ -4,6 +4,7 @@ import Cart from "../components/Cart";
 import Button from "../components/Button";
 import { useContext } from "react";
 import DataContext from "../contexts/DataContext";
+import Image from "../components/Image";
 
 function ViewProduct(props) {
   const { setCart, cart } = useContext(DataContext);
@@ -13,7 +14,7 @@ function ViewProduct(props) {
   return (
     <>
       <div className="p-image">
-        <img src={item.image} alt={item.name} />
+        <Image src={item.image} alt={item.name} />
         <div className="content">
           <Header transparent />
         </div>

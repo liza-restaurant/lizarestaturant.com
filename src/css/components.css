@@ -200,3 +200,8 @@
 .light .img-bg-min {
   min-height: unset;
 }
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(bg);
+}

@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../css/menus.css";
 import { formatNumber, menus } from "../utils";
 import useWindow from "../hooks/useWindow";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import DataContext from "../contexts/DataContext";
+import Image from "./Image";
 
 const Icon = ({ img }) => {
   return (
     <div className="icon flex justify-center align-center">
-      <img src={img} />
+      <Image src={img} />
     </div>
   );
 };
@@ -25,8 +27,7 @@ const Category = ({ title, onSelect, icon, active = false }) => {
   );
 };
 
-const Item = ({ name, image, description, id, ...props }) => {
-  const price = (Math.random() * 10000).toFixed(0);
+const Item = ({ name, image, description, price, id, ...props }) => {
   return (
     <Link
       to={`/menu/${id}`}
@@ -47,7 +48,7 @@ const Item = ({ name, image, description, id, ...props }) => {
       className="card"
     >
       <div className="img-card">
-        <img src={image} alt={description} />
+        <Image src={image} alt={description} />
       </div>
       <div className="details">
         <h4>{name}</h4>
@@ -59,35 +60,43 @@ const Item = ({ name, image, description, id, ...props }) => {
 };
 
 function Menus(props) {
-  const [menu, setMenu] = useState(menus[1].data);
+  const { categories, products } = useContext(DataContext);
+  const [menu, setMenu] = useState(null);
   const { width } = useWindow();
+
+  useEffect(() => {
+    if (categories.length) setMenu(categories[0]._id);
+  }, [categories]);
 
   return (
     <>
       <Header />
       <div className="container flex mobile-column">
         <div className="categories">
-          {(width < 768 ? menus : menus.slice(1)).map((m, idx) => (
+          {categories.map((m, idx) => (
             <Category
-              icon={m.icon}
-              active={menu === m.data}
-              onSelect={() => setMenu(m.data)}
+              icon={m.imageUrl}
+              active={menu === m._id}
+              onSelect={() => setMenu(m._id)}
               key={idx}
-              title={m.title}
+              title={m.name}
             />
           ))}
         </div>
         <div className="items">
           <div className="list flex">
-            {menu?.map((a, idx) => (
-              <Item
-                id={idx + 1}
-                key={idx}
-                image={a.image}
-                description={a.description}
-                name={a.name}
-              />
-            ))}
+            {products
+              .filter((p) => p.category._id === menu)
+              ?.map((a, idx) => (
+                <Item
+                  id={idx + 1}
+                  key={idx}
+                  image={a.imageUrl}
+                  description={a.description}
+                  name={a.name}
+                  price={a.price}
+                />
+              ))}
           </div>
         </div>
       </div>
