@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import "../css/menus.css";
-import { formatNumber, menus } from "../utils";
-import useWindow from "../hooks/useWindow";
+import { formatNumber } from "../utils";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import DataContext from "../contexts/DataContext";
@@ -60,9 +59,8 @@ const Item = ({ name, image, description, price, id, ...props }) => {
 };
 
 function Menus(props) {
-  const { categories, products } = useContext(DataContext);
+  const { categories, products, loading } = useContext(DataContext);
   const [menu, setMenu] = useState(null);
-  const { width } = useWindow();
 
   useEffect(() => {
     if (categories.length) setMenu(categories[0]._id);
@@ -72,33 +70,44 @@ function Menus(props) {
     <>
       <Header />
       <div className="container flex mobile-column">
-        <div className="categories">
-          {categories.map((m, idx) => (
-            <Category
-              icon={m.imageUrl}
-              active={menu === m._id}
-              onSelect={() => setMenu(m._id)}
-              key={idx}
-              title={m.name}
-            />
-          ))}
-        </div>
-        <div className="items">
-          <div className="list flex">
-            {products
-              .filter((p) => p.category._id === menu)
-              ?.map((a, idx) => (
-                <Item
-                  id={idx + 1}
+        {loading ? (
+          <div
+            className="flex container justify-center align-center"
+            style={{ height: 150 }}
+          >
+            <span style={{ color: "white" }}>loading...</span>
+          </div>
+        ) : (
+          <>
+            <div className="categories">
+              {categories.map((m, idx) => (
+                <Category
+                  icon={m.imageUrl}
+                  active={menu === m._id}
+                  onSelect={() => setMenu(m._id)}
                   key={idx}
-                  image={a.imageUrl}
-                  description={a.description}
-                  name={a.name}
-                  price={a.price}
+                  title={m.name}
                 />
               ))}
-          </div>
-        </div>
+            </div>
+            <div className="items">
+              <div className="list flex">
+                {products
+                  .filter((p) => p.category._id === menu)
+                  ?.map((a, idx) => (
+                    <Item
+                      id={idx + 1}
+                      key={idx}
+                      image={a.imageUrl}
+                      description={a.description}
+                      name={a.name}
+                      price={a.price}
+                    />
+                  ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

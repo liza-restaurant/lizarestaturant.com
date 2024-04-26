@@ -52,11 +52,17 @@ function App() {
 
   return (
     <DataContext.Provider
-      value={{ cart, setCart, setTheme, theme, categories, products }}
+      value={{
+        cart,
+        setCart,
+        setTheme,
+        theme,
+        categories,
+        products,
+        loading: loading1 || loading2,
+      }}
     >
-      {loading1 || loading2 ? (
-        <div className="loader"></div>
-      ) : theme === themes.light ? (
+      {theme === themes.light ? (
         <Helmet>
           <meta name="theme-color" content="#fff" />
         </Helmet>

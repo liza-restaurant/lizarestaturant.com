@@ -16,33 +16,33 @@ function useClient() {
     }
     try {
       setErrorMessage(null);
-      const tokens = store.getTokens();
-      if (tokens.accessToken) {
-        const isAccessTokenExpired =
-          getDiff(new Date(tokens.accessExpiry), new Date()) > 1;
-        const isRefreshedTokenExpired =
-          getDiff(new Date(tokens.refreshExpiry), new Date()) > 1;
-        if (isRefreshedTokenExpired) return logout();
-        if (isAccessTokenExpired) {
-          const { data } = await client.post(
-            urls.auth.restoreAccess,
-            {},
-            {
-              headers: {
-                "x-refresh-token": tokens.refreshToken,
-              },
-            }
-          );
-          if (!data.data) return logout();
-          store.setTokens({ ...tokens, ...data.data.tokens });
-          tokens.accessToken = data.data.tokens.accessToken;
-        }
-      }
-      args[2] = {
-        headers: {
-          "x-access-token": tokens.accessToken,
-        },
-      };
+      // const tokens = store.getTokens();
+      // if (tokens.accessToken) {
+      //   const isAccessTokenExpired =
+      //     getDiff(new Date(tokens.accessExpiry), new Date()) > 1;
+      //   const isRefreshedTokenExpired =
+      //     getDiff(new Date(tokens.refreshExpiry), new Date()) > 1;
+      //   if (isRefreshedTokenExpired) return logout();
+      //   if (isAccessTokenExpired) {
+      //     const { data } = await client.post(
+      //       urls.auth.restoreAccess,
+      //       {},
+      //       {
+      //         headers: {
+      //           "x-refresh-token": tokens.refreshToken,
+      //         },
+      //       }
+      //     );
+      //     if (!data.data) return logout();
+      //     store.setTokens({ ...tokens, ...data.data.tokens });
+      //     tokens.accessToken = data.data.tokens.accessToken;
+      //   }
+      // }
+      // args[2] = {
+      //   headers: {
+      //     "x-access-token": tokens.accessToken,
+      //   },
+      // };
       setIsLoading(true);
       const res = await client[type](...args);
       if (res.data.type === responseTypes.error) {

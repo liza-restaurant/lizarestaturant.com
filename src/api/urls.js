@@ -30,7 +30,7 @@ const urls = {
     baseUrl: "/v1/products/",
     add: "/v1/products/add",
     categories: {
-      baseUrl: "/v1/products/categories/",
+      baseUrl: "/v1/products/categories",
       add: "/v1/products/categories/add",
     },
     stocks: {
