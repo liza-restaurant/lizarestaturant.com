@@ -36,9 +36,9 @@ function Hero(props) {
 
           <h2 className="cormorant">The key to Fine dining</h2>
           <p>
-            Sit tellus lobortis sed senectus vivamus molestie. Condimentum
-            volutpat morbi facilisis quam scelerisque sapien. Et, penatibus
-            aliquam amet tellus
+            Discover Our Delicious Creations Taste the Difference in Every Bite
+            Experience the Flavors of Our Kitchen Uncover Your New Favorite Dish
+            Satisfy Your Cravings with Our Menu
           </p>
           <br />
           <Button to="/menu" width={140} title="Explore Menu" />

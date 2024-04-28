@@ -1,17 +1,17 @@
+import useProductCategories from "./hooks/useProductCategories";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { getItem, setItem } from "./utils/store";
+import DataContext from "./contexts/DataContext";
 import ViewProduct from "./routes/ViewProduct";
+import useProducts from "./hooks/useProducts";
+import { useEffect, useState } from "react";
+import Contact from "./components/Contact";
 import NotFound from "./routes/NotFound";
 import Footer from "./components/Footer";
 import Menus from "./components/Menus";
-import Base from "./routes/Base";
-import { useEffect, useState } from "react";
-import DataContext from "./contexts/DataContext";
-import { getItem, setItem } from "./utils/store";
-import { themes } from "./utils";
 import { Helmet } from "react-helmet";
-import Contact from "./components/Contact";
-import useProductCategories from "./hooks/useProductCategories";
-import useProducts from "./hooks/useProducts";
+import Base from "./routes/Base";
+import { themes } from "./utils";
 
 function App() {
   const [theme, setTheme] = useState(themes.dark);
@@ -49,6 +49,8 @@ function App() {
       setItem("theme", theme);
     }
   }, [theme, isSync]);
+
+  console.log(products);
 
   return (
     <DataContext.Provider

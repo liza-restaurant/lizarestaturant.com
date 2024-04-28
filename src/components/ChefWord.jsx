@@ -32,10 +32,9 @@ function ChefWord(props) {
           <br />
           <div className="contact-info">
             <p>
-              auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget
-              sit. Nulla scelerisque scelerisque congue ac consequat, aliquam
-              molestie lectus eu. Congue iaculis integer curabitur semper sit
-              nunc.
+              Host Your Next Event With Us! Make Your Event Unforgettable, Your
+              Event, Our Space Elevate Your Event Here! Reserve Our Restaurant
+              for Your Special Event
             </p>
             <br />
             <Button

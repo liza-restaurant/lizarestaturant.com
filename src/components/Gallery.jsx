@@ -19,10 +19,7 @@ function Gallery(props) {
     <div className="flex mobile-column g-container align-center justify-between">
       <div className="container gallery-abt">
         <Title title="Photo Gallery" subtitle="Instagram" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-          mattis ipsum turpis elit elit scelerisque egestas mu.
-        </p>
+        <p>Explore our Instagram for a taste of what we offer.</p>
         <br />
         <Button title="View More" width={100} />
       </div>
