@@ -1,5 +1,4 @@
 import "../css/footer.css";
-import Contact from "./Contact";
 import ImgBG from "./ImgBG";
 import NewsLetter from "./NewsLetter";
 
@@ -11,8 +10,7 @@ function Footer(props) {
         <div className="flex align-center justify-between mobile-column footer-items">
           <div>
             <h3 className="cormorant">Contact Us</h3>
-            <span>9 W 53rd St, New York, NY 10019, USA</span>
-            <span>+234 902 2231 4973</span>
+            <span>Monoliza amusement park Abuja, Nigeria.</span>
             <span>+234 902 2231 4973</span>
           </div>
           <div className="abt flex justify-center align-center flex-column">
@@ -107,8 +105,7 @@ function Footer(props) {
           </div>
           <div>
             <h3 className="cormorant">Working Hours</h3>
-            <span>Mon - Fri: 10:00 am - 02:00 am</span>
-            <span>Sat - Sun: 10:00 am - 03:00 am</span>
+            <span>Mon - Sun: 08:00 am - 10:00 pm</span>
           </div>
         </div>
         <div className="copy flex justify-center align-center">

@@ -3,7 +3,7 @@ import "../css/header.css";
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../contexts/DataContext";
 import { themes } from "../utils";
-import useWindow from "../hooks/useWindow";
+// import useWindow from "../hooks/useWindow";
 import useWindowScroll from "../hooks/useWindowScroll";
 
 const Ul1 = ({ className = "" }) => (
@@ -11,11 +11,11 @@ const Ul1 = ({ className = "" }) => (
     <Link to="/">
       <li>Home</li>
     </Link>
-    <li>Pages</li>
+    {/* <li>Pages</li> */}
     <Link to="/contact">
       <li>Contact</li>
     </Link>
-    <li>Blog</li>
+    {/* <li>Blog</li> */}
   </ul>
 );
 

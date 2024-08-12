@@ -4,6 +4,15 @@ const urls = {
     logout: "/v1/admin/logout",
     restoreAccess: "/v1/admin/refresh-access",
   },
+  messages: {
+    baseUrl: "/v1/messages",
+  },
+  news: {
+    baseUrl: "/v1/news",
+  },
+  reservations: {
+    baseUrl: "/v1/reservations",
+  },
   profile: {
     baseUrl: "/v1/admin/",
     accounts: "/v1/admin/accounts/",
@@ -30,7 +39,7 @@ const urls = {
     baseUrl: "/v1/products/",
     add: "/v1/products/add",
     categories: {
-      baseUrl: "/v1/products/categories",
+      baseUrl: "/v1/products/categories?q=false",
       add: "/v1/products/categories/add",
     },
     stocks: {

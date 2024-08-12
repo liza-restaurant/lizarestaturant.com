@@ -11,16 +11,21 @@ function FindUs(props) {
           <Title subtitle="Contact" title="Find Us" />
           <br />
           <div className="contact-info">
-            <p>Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
+            <p>Monoliza amusement park Abuja, Nigeria.</p>
             <br />
             <h3 className="cormorant">Opening Hours</h3>
             <br />
-            <span>Mon - Fri: 10:00 am - 02:00 am</span>
-            <span>Sat - Sun: 10:00 am - 03:00 am</span>
+            <span>Mon - Sun: 08:00 am - 10:00 pm</span>
             <br />
             <br />
           </div>
-          <Button title="Visit Us" width={100} />
+          <Button
+            onClick={() =>
+              window.open("https://maps.app.goo.gl/ZhT3Ht7F8g8xdu6n6")
+            }
+            title="Visit Us"
+            width={100}
+          />
         </div>
         <div className="img-chef frame-img flex justify-center align-center">
           <img src={cup} alt="Chef" />
