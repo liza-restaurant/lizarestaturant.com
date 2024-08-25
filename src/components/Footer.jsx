@@ -11,7 +11,7 @@ function Footer(props) {
           <div>
             <h3 className="cormorant">Contact Us</h3>
             <span>Monoliza amusement park Abuja, Nigeria.</span>
-            <span>+234 902 2231 4973</span>
+            <span>0806 925 8696</span>
           </div>
           <div className="abt flex justify-center align-center flex-column">
             <h2 className="cormorant">LIZA</h2>

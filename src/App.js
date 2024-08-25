@@ -50,8 +50,6 @@ function App() {
     }
   }, [theme, isSync]);
 
-  console.log(products);
-
   return (
     <DataContext.Provider
       value={{
