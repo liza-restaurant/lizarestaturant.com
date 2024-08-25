@@ -14,7 +14,7 @@ const useProducts = () => {
         .replace("{limit}", pageSize)
         .replace("{page}", pageNumber)
     );
-    if (error || data?.data) return;
+    if (error) return;
     if (!totalCounts) setTotalCounts(data.data.totalCounts);
     setProducts(data.data.products);
   };
