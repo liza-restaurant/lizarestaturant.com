@@ -22,10 +22,10 @@ function ViewProduct(props) {
       </div>
 
       <div className="item-details">
-        <div className="img-details">
-          <Image src={item.image} alt={item.name} />
-        </div>
         <div className="container mobile-column flex justify-between">
+          <div className="img-details">
+            <Image src={item.image} alt={item.name} />
+          </div>
           <div className="item-preview">
             <span>Name: </span>
             <h3>{item.name}</h3>
